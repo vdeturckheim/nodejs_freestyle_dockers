@@ -10,6 +10,5 @@ WORKDIR /root
 ENV NVS_VERSION 1.2.0
 
 RUN git clone --branch v$NVS_VERSION --depth 1 https://github.com/jasongin/nvs ~/.nvs
-RUN echo '. ~/.nvs/nvs.sh' >> .bashrc
-RUN source .bashrc
-RUN nvs ls
+RUN echo '. ~/.nvs/nvs.sh' >> ~/.bashrc
+RUN . ~/.nvs/nvs.sh
